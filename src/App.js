@@ -1,4 +1,5 @@
 import React from 'react'
+import AuthContextProvider from './ contexts/AuthContext';
 import ThemeContextProvider from './ contexts/ThemeContext';
 
 import BookList from './components/BookList';
@@ -9,9 +10,11 @@ function App() {
   return (
     <div className="App">
       <ThemeContextProvider>
-        <Navbar />
-        <BookList />
-        <ThemeToggle />
+        <AuthContextProvider>
+          <Navbar />
+          <BookList />
+          <ThemeToggle />          
+        </AuthContextProvider>
       </ThemeContextProvider>
     </div>
   );
