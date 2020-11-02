@@ -16,7 +16,6 @@ function App() {
           <BookContextProvider>
             <BookList />
           </BookContextProvider>
-          
           <ThemeToggle />          
         </AuthContextProvider>
       </ThemeContextProvider>
